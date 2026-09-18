@@ -1,0 +1,67 @@
+<!-- <p>first works! {{ name }}</p>
+
+<div [innerHTML]="name"></div>
+
+<div [innerText]="name"></div>
+
+<div [textContent]="name"></div> -->
+
+ <!-- <ul>
+    @for (item of names;let index=$index; track item) {
+        @if(index%2==0) {
+            <li>{{index}}-----{{item}}</li>
+        }
+        @else {
+            <li style="background-color: aqua;">{{index}}--{{item}}</li>
+        }
+
+    }
+</ul>  -->
+
+<!-- <ul>
+    <li *ngFor="let item of names; let index = index">
+        {{index}}--{{item}}
+    </li>
+</ul> -->
+
+<!-- <ng-Content *ngFor="let item of names; let index = index">
+<li *ngIf="index%2==0">
+    {{index}}--{{item}}</li>
+    <li *ngIf="index%2==1" style="background-color: aqua;">
+    {{index}}--{{item}}</li>
+</ng-Content> -->
+
+
+
+
+ <ul>
+    @for (item of names;let index=$index; track item) {
+       
+        @switch (index) {
+            @case(0) {
+             <ol >{{index}}--{{item}}</ol>   
+            }
+            @case(1) {
+               <ol>{{index}}--{{item}}</ol> 
+            }
+            @case(2) {
+                <ol>{{index}}--{{item}}</ol>
+            }
+        }
+    }
+</ul>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button type="button" (click)="show($event)">Show</button>
